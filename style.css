@@ -12,7 +12,6 @@ html {
   height: 100%;
   overflow-x: hidden;
   background: #d1b357 !important;
-  color: #fff;
 }
 
 /* navbar */
@@ -24,6 +23,7 @@ nav {
   padding: 15px;
   border-radius: 7px;
   margin: 10px;
+  color: #fff;
 }
 
 nav .logo {
@@ -61,6 +61,35 @@ nav ul a {
   text-align: center;
 }
 
+.selectInputContainer {
+  margin: 10px 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.selectInputContainer label {
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0px 5px;
+}
+.selectInputContainer select {
+  background: transparent;
+
+  border: 3px solid white;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 18px;
+  outline: none;
+}
+
+select option {
+  margin: 40px;
+  background: transparent;
+  color: rgb(15, 14, 14);
+}
+
 .coins-list {
   display: flex;
   max-width: 80%;
@@ -74,9 +103,10 @@ nav ul a {
   width: 340px;
   min-height: 190px;
   background-color: rgb(24, 70, 37);
-  margin: 20px 0px;
+  margin: 15px 0px;
   border-radius: 5px;
   padding: 10px 20px;
+  color: #fff;
 }
 .first-section {
   display: flex;
@@ -92,24 +122,134 @@ nav ul a {
   color: rgb(185, 185, 185);
 }
 
-.first-section .coin-image img{
-  height:75px;
+.first-section .coin-image img {
+  height: 75px;
   object-fit: cover;
 }
 
 .coin-price {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .btn {
   padding: 10px 15px;
-  border: none;
   outline: none;
-  background-color: rgb(255, 253, 253);
-  color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
   margin: 20px 0px;
   font-weight: bold;
   font-size: 15px;
+
   /* display:none; */
+}
+
+.btn:hover {
+  /* padding: 11px 16px;
+  font-size: 16px; */
+  transition: all 0.3s ease-in;
+}
+
+/* modal */
+/* The Modal (background) */
+.ebcf_modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  min-height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ebcf_modal-content {
+  background-color: rgb(24, 70, 37);
+  color: #fff;
+  margin: auto;
+  padding: 20px;
+  min-height: 250px;
+  width: 50%;
+}
+
+/* The Close Button */
+.ebcf_close {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ebcf_close:hover,
+.ebcf_close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ebcf_modal .coinContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coinContainer .imgContainer {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coinContainer .imgContainer img {
+  height: 130px;
+  width: 130px;
+}
+
+.coinContainer .coinDetails {
+  height: 100px;
+  width: 100%;
+}
+
+.coinContainer .coinDetails .detailWrapper {
+  margin: 10px 0px;
+}
+
+.coinContainer .coinDetails .detailWrapper .coinDetail {
+  margin: 10px 0px;
+}
+
+.coinDetail {
+  font-size: 20px;
+  font-weight: bold;
+}
+.coinDetail label {
+  padding: 0px 5px;
+}
+.coinDetail span {
+  padding: 0px 5px;
+}
+
+.icons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.icon img {
+  height: 45px;
+  cursor: pointer;
+  padding: 0px 10px;
 }
